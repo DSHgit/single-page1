@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	width:　100%;
+	height: 100%;
+}	
+a {
+	text-decoration: none;
+}
+ul,ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}	
+p,h2,h3 {
+	margin: 0;
+}
+#box {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: inline-block;
+}
+#left {
+	float: left;
+	width: 179px;
+	height: 100%;
+	background: url(img/ico20.png) repeat-x;
+	border-right: 1px solid #072847;
+}	
+#header {
+	position: relative;
+	width: 180px;
+	height: 69px;
+	background: url(img/ico.png) repeat-x;
+	overflow: visible;
+}	
+#header .ico1 {
+	position: absolute;
+	top: 15px;
+	left: 27px;
+	display: inline-block;
+	width: 131px;
+	height: 35px;
+	background: url(img/ico1.png) no-repeat;
+}
+#top {
+	margin: 0 9px 9px 10px;
+	width: 160px;
+	height: 160px;
+	background: url(img/ico22.png) no-repeat;
+	border-bottom: 1px solid #052152;
+}
+#down {
+	margin: 0 9px 0 10px;
+	width: 160px;
+	height: 561px;
+}
+#ul1>li {
+	width: 100px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #7eb5d4;
+	cursor: pointer;
+}
+#ul1>li:nth-of-type(1) {
+	padding: 12px 0 14px 60px;	
+	background: url(img/ico6.png) no-repeat 22px 10px;
+	border-bottom: 1px solid #02173b;
+}	
+#ul1>li:nth-of-type(2) {
+	padding: 12px 0 13px 60px;
+	background: url(img/ico7.png) no-repeat 25px 9px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(3) {
+	padding: 12px 0 13px 60px;
+	background: url(img/ico8.png) no-repeat 24px 11px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(4) {
+	padding: 11px 0 13px 60px;
+	background: url(img/ico9.png) no-repeat 23px 9px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(5) {
+	padding: 11px 0 0 60px;
+	height: 212px;
+	color: #5af3d5;	
+	background: url(img/ico10.png) no-repeat 23px 9px;
+	background-color: #072342;
+	border-bottom: 1px solid #073d66;
+}
+#ul2 {
+	padding: 31px 44px 31px 0;
+	width: 56px;
+	height: 136px;
+	font: 14px/34px "宋体";
+	color: #7eb5d4;
+}
+#ul2 .li1 {
+	color: #5af3d5;
+}
+#ul1>li:nth-of-type(6) {
+	padding: 10px 0 13px 60px;
+	width: 100px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #7eb5d4;
+	background: url(img/ico11.png) no-repeat 23px 9px;
+}
+#right {
+	margin-left: 180px;	
+	width: 1320px;
+	height: 100%;
+	background: #e8ebed;
+}
+#right #h2 {
+	position: relative;
+	width: 1320px;
+	height: 69px;
+	background: url(img/ico.png) repeat-x;
+	overflow: visible;
+}
+#right #h2 .ico {
+	position: absolute;
+	top: 20px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+#right #h2 #ico2 {
+	left: 1172px;
+	background: url(img/ico2.png) no-repeat;
+}
+#right #h2 #ico3 {
+	left: 1221px;
+	background: url(img/ico3.png) no-repeat;
+}
+#right #h2 #ico4 {
+	left: 1270px;
+	background: url(img/ico4.png) no-repeat;
+}
+#right h3 {
+	padding: 29px 0 51px 52px;
+	width: 140px;
+	height: 34px;
+	font: 34px/1 "幼圆";
+	color: #0e1e45;
+	background: url(img/ico19.png) no-repeat -1px -1px;
+}
+#right #row1 {
+	margin-left: 51px;
+	width: 374px;
+	height: 28px;
+	font: 14px/1 "宋体";
+	color: #303a58;
+	background: #fff;
+	border: 1px solid #dee1e3;
+	border-radius: 3px;
+}
+#right #row1 span {
+	float: left;
+	padding: 6px 34px 8px 34px;
+	width: 56px;
+	height: 14px;
+	border-right: 1px solid #dee1e3;
+	cursor: pointer;	
+}
+#row1 .show {
+	color: #f6f9fc;
+	background: #499dd2;	
+}
+#right #row1 span:nth-of-type(3) {
+	padding: 6px 20px 8px 20px;
+	width: 84px;
+	border-right: none;	
+}
+#information {
+	margin-left: 50px;		
+	width: 1270px;
+	height: 546px;
+}
+.info {
+	margin-top: 41px;
+	width: 100%;
+	height: 289px;
+	
+}
+.info #title {
+	position: relative;
+	padding-bottom: 12px;
+	width: 100%;
+	height: 18px;
+	font: 18px/1 "宋体";
+	color: #0e1e45;
+	border-bottom: 1px solid #dcdfe6;
+}
+.info #title a {
+	position: absolute;
+	top: 0;
+	left: 81px;
+	width: 18px;
+	height: 18px;
+	background: url(img/ico21.png) no-repeat;
+}
+#password {
+	margin-bottom: 131px;
+	width: 100%;
+	height: 44px;	
+}
+.content {
+	padding-top: 20px;
+}
+.content .call {
+	text-indent: 14px;
+}
+.content .sj {
+	text-indent: 28px;
+}
+.info li {
+	width: 100%;
+	height: 34px;
+	font: 14px/34px "幼圆","arial rounded mt bold";
+	color: #344462;
+}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="left">
+			<header id="header"><span class="ico1"></span></header>
+			<div id="top"></div>
+			<div id="down">
+				<ul id="ul1">
+					<li>首页</li>
+					<li>投放管理</li>
+					<li>资源管理</li>
+					<li>数据管理</li>
+					<li>财务管理
+						<ul id="ul2">
+							<li class="li1">财务信息</li>
+							<li>账户充值</li>
+							<li>利润提取</li>
+							<li>发票工具</li>
+						</ul>
+					</li>
+					<li>系统管理</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<h2 id="h2">
+				<span id="ico2" class="ico"></span>
+				<span id="ico3" class="ico"></span>
+				<span id="ico4" class="ico"></span>
+			</h2>
+			<h3>系统管理</h3>
+			<div id="row1">
+				<span class="show">基本信息</span>
+				<span>角色管理</span>
+				<span>客户关系管理</span>
+			</div>
+			<div id="information">
+				<ul>
+					<li class="info">
+						<div id="title">基本信息<a href=""></a></div>
+						<ul class="content">
+							<li>账户名称   : aos@behe.com</li>
+							<li>公司名称   : 璧合广告</li>
+							<li>账户域名   : http://www.behe.com</li>
+							<li>账户地址   : http://www.behe.com</li>
+							<li class="call">联系人    : 许仙</li>
+							<li>手机号码   : 18512655630</li>
+							<li>电话号码   : 010-66666666</li>
+						</ul>
+					</li>
+					<li id="password" class="info">
+						<div id="title">密码信息<a href=""></a></div>
+						<ul class="content">
+							<li class="sj">密码   : xxxxxx</li>
+						</ul>
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

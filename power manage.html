@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	width:　100%;
+	height: 100%;
+}	
+a {
+	text-decoration: none;
+}
+ul,ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}	
+p,h2,h3 {
+	margin: 0;
+}
+#box {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: inline-block;
+}
+#left {
+	float: left;
+	width: 179px;
+	height: 100%;
+	background: url(img/img1/ico.png) repeat-x;
+	border-right: 1px solid #072847;
+}	
+#header {
+	position: relative;
+	width: 180px;
+	height: 69px;
+	background: url(img/ico.png) repeat-x;
+	overflow: visible;
+}	
+#header .ico1 {
+	position: absolute;
+	top: 15px;
+	left: 27px;
+	display: inline-block;
+	width: 131px;
+	height: 35px;
+	background: url(img/ico1.png) no-repeat;
+}
+#top {
+	margin: 0 9px 9px 10px;
+	width: 160px;
+	height: 160px;
+	background: url(img/ico5.png) no-repeat;
+	border-bottom: 1px solid #052152;
+}
+#down {
+	margin: 0 9px 0 10px;
+	width: 160px;
+	height: 761px;
+}
+#ul1>li {
+	width: 100px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #7eb5d4;
+	cursor: pointer;
+}
+#ul1>li:nth-of-type(1) {
+	padding: 12px 0 14px 60px;	
+	background: url(img/ico6.png) no-repeat 22px 10px;
+	border-bottom: 1px solid #02173b;
+}	
+#ul1>li:nth-of-type(2) {
+	padding: 12px 0 13px 60px;
+	background: url(img/ico7.png) no-repeat 25px 9px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(3) {
+	padding: 12px 0 13px 60px;
+	background: url(img/ico8.png) no-repeat 24px 11px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(4) {
+	padding: 11px 0 13px 60px;
+	background: url(img/ico9.png) no-repeat 23px 9px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(5) {
+	padding: 11px 0 0 60px;
+	height: 212px;
+	color: #5af3d5;	
+	background: url(img/ico10.png) no-repeat 23px 9px;
+	background-color: #072342;
+	border-bottom: 1px solid #073d66;
+}
+#ul2 {
+	padding: 31px 44px 31px 0;
+	width: 56px;
+	height: 136px;
+	font: 14px/34px "宋体";
+	color: #7eb5d4;
+}
+#ul2 .li1 {
+	color: #5af3d5;
+}
+#ul1>li:nth-of-type(6) {
+	padding: 10px 0 13px 60px;
+	width: 100px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #7eb5d4;
+	background: url(img/ico11.png) no-repeat 23px 9px;
+}
+#right {
+	margin-left: 180px;	
+	width: 1320px;
+	height: 100%;
+	background: #e8ebed;
+}
+#right #h2 {
+	position: relative;
+	width: 100%;
+	height: 69px;
+	background: url(img/ico.png) repeat-x;
+	overflow: visible;
+}
+#right #h2 .ico {
+	position: absolute;
+	top: 20px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+#right #h2 #ico2 {
+	left: 1172px;
+	background: url(img/ico2.png) no-repeat;
+}
+#right #h2 #ico3 {
+	left: 1221px;
+	background: url(img/ico3.png) no-repeat;
+}
+#right #h2 #ico4 {
+	left: 1270px;
+	background: url(img/ico4.png) no-repeat;
+}
+#right h3 {
+	padding: 29px 0 51px 52px;
+	width: 140px;
+	height: 34px;
+	font: 34px/1 "幼圆";
+	color: #0e1e45;
+	background: url(img/ico19.png) no-repeat -1px -1px;
+}
+#right #row1 {
+	margin: 0 0 41px 51px;
+	width: 249px;
+	height: 28px;
+	font: 14px/1 "宋体";
+	color: #303a58;
+	background: #fff;
+	border: 1px solid #dee1e3;
+	border-radius: 4px;
+}
+#right #row1 span {
+	float: left;
+	padding: 6px 34px 8px 34px;
+	width: 56px;
+	height: 14px;
+	border-right: 1px solid #dee1e3;
+	cursor: pointer;	
+}
+#row1 .show {
+	color: #f6f9fc;
+	background: #499dd2;	
+}
+#right #row1 span:nth-of-type(2) {
+	padding: 6px 27px 8px 27px;
+	width: 70px;
+	border-right: none;	
+}
+#right #row2 {
+	margin: 0 0 20px 51px;
+	width: 96px;
+	height: 30px;
+	font: 14px/1 "宋体";
+	color: #f6fbfb;
+	background: #42c5be;
+	border-radius: 4px;
+}
+#row2 .new {
+	display: inline-block;
+	padding: 8px 20px;
+	width: 56px;
+	height: 14px;
+	cursor: pointer;	
+}
+#information {
+	margin-left: 50px;
+	width: 1241px;
+	height: 696px;	
+}
+#information nav {
+	width: 100%;
+	height: 50px;
+	font: 16px/50px "幼圆";
+	color: #324563;
+	background: #acd5e8;
+}
+nav span {
+	float: left;
+	display: inline-block;
+	text-align: center;
+}
+nav .nav1 {
+	width: 406px;	
+}
+nav .nav2 {
+	width: 370px;	
+}
+nav .nav3 {
+	width: 408px;	
+}
+#information ul {
+	width: 100%;
+	height: 400px;	
+	color: #0e1e45;	
+}
+#information ul li {
+	padding-bottom: 2px;
+	width: 100%;
+	height: 38px;
+	font: 14px/38px "幼圆","arial rounded mt bold";
+	background: #c8e0ec;
+}
+#information li .name {	
+	float: left;
+	width: 406px;
+	text-align: center;
+}
+#information li .manage {	
+	float: left;
+	width: 370px;
+	text-align: center;
+}
+#information li .copy {	
+	float: left;
+	width: 408px;
+	text-align: center;	
+}
+.copy a {
+	color: #57a3d3;
+}
+#information li:nth-of-type(odd) {	
+	background: #d8e8f0;
+}
+#footer {
+	padding: 30px 427px 39px 432px;
+	width: 382px;
+	height: 25px;
+	color: #4a9dd1;
+	font: 14px/25px "arial";
+	background: #d8e8f0;	
+}
+#footer span {
+	cursor: pointer;
+}
+#footer .index1 {
+	margin: 0 9px;
+}
+#footer span:nth-of-type(2) {
+	display: inline-block;
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	color: #fff;
+	text-align: center;
+	background: #4a9dd1;
+	border-radius: 2px;
+}
+#footer .prev,
+#footer .next {
+	display: inline-block;
+	margin: 0 9px;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	border: 1px solid #4a9dd1;
+	border-radius: 2px;
+}
+#footer .next {
+	margin: 0;
+}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="left">
+			<header id="header"><span class="ico1"></span></header>
+			<div id="top"></div>
+			<div id="down">
+				<ul id="ul1">
+					<li>首页</li>
+					<li>投放管理</li>
+					<li>资源管理</li>
+					<li>数据管理</li>
+					<li>财务管理
+						<ul id="ul2">
+							<li class="li1">财务信息</li>
+							<li>账户充值</li>
+							<li>利润提取</li>
+							<li>发票工具</li>
+						</ul>
+					</li>
+					<li>系统管理</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<h2 id="h2">
+				<span id="ico2" class="ico"></span>
+				<span id="ico3" class="ico"></span>
+				<span id="ico4" class="ico"></span>
+			</h2>
+			<h3>权限管理</h3>
+			<div id="row1">
+				<span class="show">员工角色</span>
+				<span>广告主角色</span>				
+			</div>
+			<div id="row2">
+				<span class="new">新建角色</span>				
+			</div>
+			<div id="information">
+				<nav>
+					<span class="nav1">角色名</span>
+					<span class="nav2">角色备注</span>
+					<span class="nav3">操作</span>
+				</nav>
+				<ul>
+					<li>
+						<p class="name">系统管理员</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">报表分析员</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">财务管理员</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员-02</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员-03</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员-04</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员-05</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员-06</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+					<li>
+						<p class="name">投放管理员-07</p>
+						<p class="manage">系统管理员</p>
+						<p class="copy"><a href="">复制</a></p>
+					</li>
+				</ul>
+				<div id="footer">
+					<span class="prev"><</span>
+					<span class="index1">1</span>
+					<span class="index1">2</span>
+					<span class="index1">3</span>
+					<span class="index1">4</span>
+					<span class="index1">…</span>
+					<span class="index1">10</span>
+					<span class="index1">20</span>
+					<span class="index1">30</span>
+					<span class="index1">38</span>
+					<span class="next">></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

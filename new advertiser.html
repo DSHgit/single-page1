@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	width:　100%;
+	height: 100%;
+}	
+a {
+	text-decoration: none;
+}
+ul,ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}	
+p,h2,h3 {
+	margin: 0;
+}
+input {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+#box {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: inline-block;
+}
+#left {
+	float: left;
+	width: 179px;
+	height: 100%;
+	background: url(img/ico30.png) repeat-x;
+	border-right: 1px solid #072847;
+}	
+#header {
+	position: relative;
+	width: 180px;
+	height: 69px;
+	background: url(img/ico.png) repeat-x;
+	overflow: visible;
+}	
+#header .ico1 {
+	position: absolute;
+	top: 15px;
+	left: 27px;
+	display: inline-block;
+	width: 131px;
+	height: 35px;
+	background: url(img/ico1.png) no-repeat;
+}
+#top {
+	margin: 0 9px 9px 10px;
+	width: 160px;
+	height: 160px;
+	background: url(img/ico22.png) no-repeat;
+	border-bottom: 1px solid #052152;
+}
+#down {
+	margin: 0 9px 0 10px;
+	width: 160px;
+	height: 1061px;
+}
+#ul1>li {
+	width: 100px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #7eb5d4;
+	cursor: pointer;
+}
+#ul1>li:nth-of-type(1) {
+	padding: 12px 0 14px 60px;	
+	background: url(img/ico6.png) no-repeat 22px 10px;
+	border-bottom: 1px solid #02173b;
+}	
+#ul1>li:nth-of-type(2) {
+	padding: 12px 0 13px 60px;
+	background: url(img/ico7.png) no-repeat 25px 9px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(3) {
+	padding: 12px 0 13px 60px;
+	background: url(img/ico8.png) no-repeat 24px 11px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(4) {
+	padding: 11px 0 13px 60px;
+	background: url(img/ico9.png) no-repeat 23px 9px;
+	border-bottom: 1px solid #02173b;
+}
+#ul1>li:nth-of-type(5) {
+	padding: 11px 0 0 60px;
+	height: 212px;
+	color: #5af3d5;	
+	background: url(img/ico10.png) no-repeat 23px 9px;
+	background-color: #072342;
+	border-bottom: 1px solid #073d66;
+}
+#ul2 {
+	padding: 31px 44px 31px 0;
+	width: 56px;
+	height: 136px;
+	font: 14px/34px "宋体";
+	color: #7eb5d4;
+}
+#ul2 .li1 {
+	color: #5af3d5;
+}
+#ul1>li:nth-of-type(6) {
+	padding: 10px 0 13px 60px;
+	width: 100px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #7eb5d4;
+	background: url(img/ico11.png) no-repeat 23px 9px;
+}
+#right {
+	margin-left: 180px;	
+	width: 1320px;
+	height: 100%;
+	background: #e8ebed;
+}
+#right #h2 {
+	position: relative;
+	width: 1320px;
+	height: 69px;
+	background: url(img/ico.png) repeat-x;
+	overflow: visible;
+}
+#right #h2 .ico {
+	position: absolute;
+	top: 20px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+#right #h2 #ico2 {
+	left: 1172px;
+	background: url(img/ico2.png) no-repeat;
+}
+#right #h2 #ico3 {
+	left: 1221px;
+	background: url(img/ico3.png) no-repeat;
+}
+#right #h2 #ico4 {
+	left: 1270px;
+	background: url(img/ico4.png) no-repeat;
+}
+#right h3 {
+	padding: 29px 0 51px 52px;
+	width: 140px;
+	height: 34px;
+	font: 34px/1 "幼圆";
+	color: #0e1e45;
+	background: url(img/ico19.png) no-repeat -1px -1px;
+}
+#right #name {
+	margin-left: 50px;
+	width: 1270px;
+	height: 32px;
+	font: 14px/32px "宋体";
+	color: #2c3755;
+}
+#name .asterisk {
+	float: left;
+	margin-left: 20px;
+	padding: 2px 5px 10px 5px;
+	width: 12px;
+	height: 12px;
+	color: #ee645d;
+	text-align: center;
+}
+#name .name,
+#remark .name {
+	float: left;
+	width: 50px;
+	height: 32px;
+	font: 14px/32px "宋体";
+	color: #2c3755;
+}
+#name input,
+#remark input {
+	float: left;
+	width: 317px;
+	height: 30px;
+	background: #fafafa;
+	border: 1px solid #dee1e3;
+	border-radius: 5px;
+}
+#right #remark {
+	margin: 20px 0 20px 92px;
+	width: 1228px;
+	height: 32px;
+	font: 14px/32px "宋体";
+	color: #2c3755;
+}
+#right #tab {
+	position: relative;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 430px;
+}
+#tab #power {
+	float: left;
+	margin-left: 42px;
+	width: 100px;
+	height: 40px;
+	font: 14px/32px "宋体";
+	color: #2c3755;
+}
+#power .asterisk {
+	float: left;
+	padding: 2px 5px 10px 5px;
+	width: 12px;
+	height: 12px;
+	color: #ee645d;
+	text-align: center;
+}
+#tab #left {
+	float: left;
+	width: 352px;
+	height: 428px;
+	border: 1px solid #dee1e3;
+	background: #fafafa;
+}
+#tab #left #row1,
+#tab1 #left #row1 {
+	position: relative;
+	width: 100%;
+	height: 38px;
+	border-bottom: 1px solid #dee1e3;
+	background: #eceff1;
+}
+#tab #row1 .option,
+#tab1 #row1 .option {
+	position: absolute;
+	top: 13px;
+	left: 20px;
+	width: 56px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #2d3856;
+}
+#tab #row1 .checkall,
+#tab1 #row1 .checkall {
+	position: absolute;
+	top: 13px;
+	left: 315px;
+	width: 28px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #56a2d4;
+}
+#tab #left #row2 {
+	width: 352px;
+	height: 389px;
+	border-top: none;
+}
+#row2 .left {
+	float: left;
+	width: 342px;
+	height: 389px;
+}
+#row2 .left li {
+	width: 272px;
+	height: 38px;
+	font: 14px/38px "宋体";
+	color: #2f3957;
+	border-bottom: 1px solid #dee1e3;
+}
+#row2 .left li:nth-of-type(1) {
+	padding-left: 70px;
+	background: url(img/ico23.png) no-repeat 53px 12px;
+}
+#row2 .left li:nth-of-type(2) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico24.png) no-repeat 53px 12px;
+	background-color: #d9ecf5;
+}
+#row2 li:nth-of-type(2) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico29.png) no-repeat;
+}
+#row2 .left li:nth-of-type(3) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico24.png) no-repeat 53px 12px;
+}
+#row2 li:nth-of-type(3) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico28.png) no-repeat;
+}
+#row2 .left li:nth-of-type(4) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico23.png) no-repeat 53px 12px;
+}
+#row2 li:nth-of-type(4) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico28.png) no-repeat;
+}
+#row2 .left li:nth-of-type(5) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico23.png) no-repeat 53px 12px;
+}
+#row2 li:nth-of-type(5) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico27.png) no-repeat;
+}
+#row2 .left li:nth-of-type(6) {
+	width: 252px;
+	position: relative;
+	padding-left: 90px;
+	background: url(img/ico23.png) no-repeat 73px 12px;
+}
+#row2 li:nth-of-type(6) span {
+	position: absolute;
+	top: 12px;
+	left: 39px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico28.png) no-repeat;
+}
+#row2 .left li:nth-of-type(7) {
+	width: 252px;
+	position: relative;
+	padding-left: 90px;
+	background: url(img/ico23.png) no-repeat 73px 12px;
+}
+#row2 li:nth-of-type(7) span {
+	position: absolute;
+	top: 12px;
+	left: 39px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico27.png) no-repeat;
+}
+#row2 .left li:nth-of-type(8) {
+	width: 232px;
+	position: relative;
+	padding-left: 110px;
+	background: url(img/ico23.png) no-repeat 93px 12px;
+}
+#row2 li:nth-of-type(8) span {
+	position: absolute;
+	top: 12px;
+	left: 59px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico27.png) no-repeat;
+}
+#row2 .left li:nth-of-type(9) {
+	width: 212px;
+	position: relative;
+	padding-left: 130px;
+	background: url(img/ico23.png) no-repeat 113px 12px;
+}
+#row2 .left li:nth-of-type(10) {
+	width: 212px;
+	padding-left: 130px;
+	background: url(img/ico25.png) no-repeat 113px 12px;
+	border-bottom: none;
+}
+#row2 .right {
+	float: left;
+	margin: 3px 3px 0 3px;
+	width: 4px;
+	height: 116px;
+	background: #dee1e3;
+}
+#tab .arrow {
+	float: left;
+	margin: 199px 14px 0 10px;
+	padding: 13px;
+	width: 12px;
+	height: 12px;
+	font: 12px/1 "宋体";
+	color: #454545;
+	border: 1px solid #dee1e3;
+	background: #fafafa;
+}
+#tab #right {
+	position: relative;
+	float: left;
+	margin: 0;
+	width: 493px;
+	height: 428px;
+	border: 1px solid #dee1e3;
+	background: #fafafa;
+}
+#tab #right .option {
+	padding-left: 10px;
+	width: 483px;
+	height: 38px;
+	font: 14px/38px "宋体";
+	color: #2d3856;
+	border-bottom: 1px solid #dee1e3;
+	background: #eceff1;	
+}
+.option a {
+	display: inline-block;
+	width: 14px;
+	height: 38px;
+	font: 14px/38px "宋体";
+	color: #ee645d;
+}
+#tab #right #box1 {
+	padding: 20px 0 0 20px;
+	width: 473px;
+	height: 35px;
+	font: 14px/35px "宋体";
+	color: #63a9d7;	
+}
+#box1 .div1 {
+	float: left;
+	padding-left: 20px;
+	width: 111px;
+	height: 35px;
+	background: #d9ecf5;
+}
+#box1 .div2 {
+	float: left;
+	margin-left: 10px;
+	padding-left: 20px;
+	width: 131px;
+	height: 35px;
+	background: #d9ecf5;
+}
+#box1 a {
+	float: right;
+	display: inline-block;
+	padding: 0 10px 14px 0;
+	width: 10px;
+	height:10px;
+	font: 14px/38px "arial";
+	color: #499dd2;	
+	text-align: center;
+}
+#tab #right .closeAll {
+	position: absolute;
+	top: 406px;
+	left: 427px;
+	width: 56px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #57a3d4;	
+}
+
+
+
+
+#right #tab1 {
+	position: relative;
+	width: 100%;
+	height: 564px;
+}
+#tab1 #power {
+	float: left;
+	margin-left: 42px;
+	width: 100px;
+	height: 40px;
+	font: 14px/32px "宋体";
+	color: #2c3755;
+}
+#tab1 #left {
+	float: left;
+	width: 352px;
+	height: 428px;
+	border: 1px solid #dee1e3;
+	background: #fafafa;
+}
+#tab1 #left #row3 {
+	width: 352px;
+	height: 389px;
+	border-top: none;
+}
+#row3 .left {
+	float: left;
+	width: 342px;
+	height: 389px;
+}
+#row3 .left li {
+	width: 272px;
+	height: 38px;
+	font: 14px/38px "宋体";
+	color: #2f3957;
+	border-bottom: 1px solid #dee1e3;
+}
+#row3 .left li:nth-of-type(1) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico23.png) no-repeat 53px 12px;
+}
+#row3 li:nth-of-type(1) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico28.png) no-repeat;
+}
+#row3 .left li:nth-of-type(2) {
+	position: relative;
+	padding-left: 90px;
+	width: 252px;
+	background: url(img/ico24.png) no-repeat 73px 12px;
+	background-color: #d9ecf5;
+}
+
+#row3 .left li:nth-of-type(3) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico25.png) no-repeat 53px 12px;
+}
+#row3 li:nth-of-type(3) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico28.png) no-repeat;
+}
+#row3 .left li:nth-of-type(4) {
+	position: relative;
+	padding-left: 70px;
+	background: url(img/ico23.png) no-repeat 53px 12px;
+}
+#row3 li:nth-of-type(4) span {
+	position: absolute;
+	top: 12px;
+	left: 19px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico26.png) no-repeat;
+}
+#row3 .left li:nth-of-type(5),
+#row3 .left li:nth-of-type(6) {
+	width: 252px;
+	padding-left: 90px;
+	background: url(img/ico23.png) no-repeat 73px 12px;
+}
+#row3 .left li:nth-of-type(7),
+#row3 .left li:nth-of-type(8),
+#row3 .left li:nth-of-type(9),
+#row3 .left li:nth-of-type(10) {
+	position: relative;
+	padding-left: 90px;
+	width: 252px;
+	background: url(img/ico23.png) no-repeat 73px 12px;
+}
+#row3 li:nth-of-type(7) span,
+#row3 li:nth-of-type(8) span,
+#row3 li:nth-of-type(9) span,
+#row3 li:nth-of-type(10) span {
+	position: absolute;
+	top: 12px;
+	left: 39px;
+	width: 14px;
+	height: 14px;
+	background: url(img/ico28.png) no-repeat;
+}
+#row3 .left li:nth-of-type(10) {
+	border-bottom: none;
+}
+#row3 .right {
+	float: left;
+	margin: 3px 3px 0 3px;
+	width: 4px;
+	height: 116px;
+	background: #dee1e3;
+}
+#tab1 .arrow {
+	float: left;
+	margin: 199px 14px 0 10px;
+	padding: 13px;
+	width: 12px;
+	height: 12px;
+	font: 12px/1 "宋体";
+	color: #454545;
+	border: 1px solid #dee1e3;
+	background: #fafafa;
+}
+#tab1 #right {
+	position: relative;
+	float: left;
+	margin: 0;
+	width: 493px;
+	height: 428px;
+	border: 1px solid #dee1e3;
+	background: #fafafa;
+}
+#tab1 #right .option {
+	padding-left: 10px;
+	width: 483px;
+	height: 38px;
+	font: 14px/38px "宋体";
+	color: #2d3856;
+	border-bottom: 1px solid #dee1e3;
+	background: #eceff1;	
+}
+/*.option a {
+	display: inline-block;
+	width: 14px;
+	height: 38px;
+	font: 14px/38px "宋体";
+	color: #ee645d;
+}*/
+#tab1 #right #box1 {
+	padding: 20px 0 0 20px;
+	width: 473px;
+	height: 35px;
+	font: 14px/35px "宋体";
+	color: #63a9d7;	
+}
+/*#box1 .div1 {
+	float: left;
+	padding-left: 20px;
+	width: 111px;
+	height: 35px;
+	background: #d9ecf5;
+}
+#box1 .div2 {
+	float: left;
+	margin-left: 10px;
+	padding-left: 20px;
+	width: 131px;
+	height: 35px;
+	background: #d9ecf5;
+}
+#box1 a {
+	float: right;
+	display: inline-block;
+	padding: 0 10px 14px 0;
+	width: 10px;
+	height:10px;
+	font: 14px/38px "arial";
+	color: #499dd2;	
+	text-align: center;
+}*/
+#tab1 #right .closeAll {
+	position: absolute;
+	top: 406px;
+	left: 427px;
+	width: 56px;
+	height: 14px;
+	font: 14px/1 "宋体";
+	color: #57a3d4;	
+}
+
+
+
+
+#tab1 input {
+	position: absolute;
+	top: 460px;
+	left: 142px;	
+	width: 108px;
+	height: 38px;
+	font: 14px/38px "arial";
+	color: #f6fbfb;	
+	background: #42c5be;
+	border: none;
+	border-radius: 4px;
+}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="left">
+			<header id="header"><span class="ico1"></span></header>
+			<div id="top"></div>
+			<div id="down">
+				<ul id="ul1">
+					<li>首页</li>
+					<li>投放管理</li>
+					<li>资源管理</li>
+					<li>数据管理</li>
+					<li>财务管理
+						<ul id="ul2">
+							<li class="li1">财务信息</li>
+							<li>账户充值</li>
+							<li>利润提取</li>
+							<li>发票工具</li>
+						</ul>
+					</li>
+					<li>系统管理</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<h2 id="h2">
+				<span id="ico2" class="ico"></span>
+				<span id="ico3" class="ico"></span>
+				<span id="ico4" class="ico"></span>
+			</h2>
+			<h3>新建角色</h3>
+			<div id="name">
+				<span class="asterisk">*</span>
+				<span class="name">名称   :</span>
+				<input type="text" />
+			</div>
+			<div id="remark">
+				<span class="name">备注   :</span>
+				<input type="text" />
+			</div>			
+			<div id="tab">
+				<div id="power">
+					<span class="asterisk">*</span>
+					<span class="power">模块权限   :</span>
+				</div>
+				<div id="left">
+					<div id="row1">
+						<span class="option">可选权限</span>
+						<a href="" class="checkall">全选</a>
+					</div>
+					<div id="row2">
+						<ul class="left">
+							<li class="one">首页</li>
+							<li class="two">广告活动<span></span></li>
+							<li class="three">广告单元<span></span></li>
+							<li class="four">数据报表<span></span></li>
+							<li class="five">工具管理<span></span></li>
+							<li class="six">创意管理<span></span></li>
+							<li class="seven">策略管理<span></span></li>
+							<li class="eight">我的策略<span></span></li>
+							<li class="nine">新建/编辑</li>
+							<li class="ten">分享</li>
+						</ul>
+						<div class="right"></div>
+					</div>
+				</div>
+				<span class="arrow">>></span>
+				<div id="right">
+					<div class="option">已选择权限 <a href="" class="num">2</a>项</div>
+					<div id="box1">
+						<div class="div1">查看客户列表<a href="" class="close">x</a></div>
+						<div class="div2">进入广告主账户<a href="" class="close">x</a></div>
+					</div>
+					<a href="" class="closeAll">全部清空</a>
+				</div>
+			</div>
+			<div id="tab1">
+				<div id="power">
+					<span class="asterisk">*</span>
+					<span class="power">模块权限   :</span>
+				</div>
+				<div id="left">
+					<div id="row1">
+						<span class="option">可选权限</span>
+						<a href="" class="checkall">全选</a>
+					</div>
+					<div id="row3">
+						<ul class="left">
+							<li class="one">交易类型<span></span></li>
+							<li class="two">公开交易</li>
+							<li class="three">订单类型<span></span></li>
+							<li class="four">定向设置<span></span></li>
+							<li class="five">策略选择</li>
+							<li class="six">广告可见性</li>
+							<li class="seven">出价方式<span></span></li>
+							<li class="eight">效果报表字段<span></span></li>
+							<li class="nine">自然流量报表字段<span></span></li>
+							<li class="ten">服务费明细字段<span></span></li>
+						</ul>
+						<div class="right"></div>
+					</div>
+				</div>
+				<span class="arrow">>></span>
+				<div id="right">
+					<div class="option">已选择权限 <a href="" class="num">2</a>项</div>
+					<div id="box1">
+						<div class="div1">查看客户列表<a href="" class="close">x</a></div>
+						<div class="div2">进入广告主账户<a href="" class="close">x</a></div>
+					</div>
+					<a href="" class="closeAll">全部清空</a>
+				</div>
+				<input type="button" value="确定" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
